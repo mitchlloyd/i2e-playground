@@ -1,0 +1,11 @@
+<div>
+  {{#each model as |photo|}}
+    {{#link-to 'photos.photo' photo}}{{photo.title}}{{/link-to}}
+  {{/each}}
+</div>
+
+<hr>
+
+{{outlet}}
+
+<p>That's a photo up there.</p>

@@ -9,6 +9,10 @@ Router.map(function() {
   this.route('handlebars');
   this.route('keys');
   this.route('crazy-conditionals');
+
+  this.route('photos', function() {
+    this.route('photo', { path: '/:photo_id' });
+  });
 });
 
 export default Router;
