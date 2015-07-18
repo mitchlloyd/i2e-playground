@@ -1,0 +1,32 @@
+<style>
+  .fixed-height {
+    height: 100px;
+  }
+</style>
+
+<div class="fixed-height">
+  <h2>Simple People</h2>
+  {{#each people as |person|}}
+    {{person.name}}
+  {{/each}}
+</div>
+
+<div class="fixed-height">
+  <h2>Each with else</h2>
+  {{#each people as |person|}}
+    {{person.name}}
+  {{else}}
+    No people yet.
+  {{/each}}
+</div>
+
+<div class="fixed-height">
+  <h2>So many states!</h2>
+  {{#if isLoading}}
+    Please hold...
+  {{else each people as |person|}}
+    {{person.name}}
+  {{else}}
+    There are not people at all!
+  {{/if}}
+</div>

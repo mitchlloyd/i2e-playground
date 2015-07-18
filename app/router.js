@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('handlebars');
   this.route('keys');
+  this.route('crazy-conditionals');
 });
 
 export default Router;
