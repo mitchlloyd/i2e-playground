@@ -1,0 +1,28 @@
+<p>Hello {{name}}</p>
+
+<p>
+  {{input value=name}}
+</p>
+
+<hr>
+
+<label>
+  {{input type="checkbox" checked=isAdmin}}
+  isAdmin?
+</label>
+
+{{#if isAdmin}}
+  <p>You're an admin!</p>
+{{/if}}
+
+<hr>
+
+<p>Model name: {{model.name}}</p>
+
+<p>Hobbies:</p>
+
+<ul>
+  {{#each model.hobbies as |hobbie|}}
+    <li>{{hobbie}}</li>
+  {{/each}}
+</ul>

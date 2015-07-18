@@ -1,0 +1,18 @@
+<button {{action 'toggleDogs'}}>Toggle</button>
+<br>
+
+<style>
+  span {
+    transition: width 1s;
+  }
+</style>
+
+{{! add key="name" to see some magic! }}
+{{#each dogs as |dog|}}
+  <span style="width: 100px; display:inline-block">{{dog.name}}</span>
+  <span style="background-color:green;
+               display:inline-block;
+               width:{{dog.weight}}px;
+               height: 18px" />
+  <br>
+{{/each}}

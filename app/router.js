@@ -6,6 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('handlebars');
+  this.route('keys');
 });
 
 export default Router;
