@@ -11,7 +11,7 @@ const DOGS_1 = [
     weight: 44,
     name: "Nikki"
   }
-]
+];
 
 const DOGS_2 = [
   {
@@ -24,7 +24,7 @@ const DOGS_2 = [
     weight: 4,
     name: "Nikki"
   }
-]
+];
 
 export default Ember.Component.extend({
   actions: {
