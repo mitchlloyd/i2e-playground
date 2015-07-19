@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 export default Ember.Route.extend({
   model() {
     let dog = Ember.Object.create({ name: "Ellie" });
@@ -6,6 +8,6 @@ export default Ember.Route.extend({
     window.dog = dog;
     window.cat = cat;
 
-    return { dog, cat }
+    return { dog, cat };
   }
 });
