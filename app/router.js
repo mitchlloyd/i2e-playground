@@ -13,6 +13,8 @@ Router.map(function() {
   this.route('photos', function() {
     this.route('photo', { path: '/:photo_id' });
   });
+
+  this.route('helpers');
 });
 
 export default Router;
