@@ -1,15 +1,19 @@
 import Ember from 'ember';
-const { run, inject, computed } = Ember;
+const { on, run, inject } = Ember;
 
 export default Ember.Component.extend({
   friendActivity: inject.service(),
   isActive: false,
-  currentNotification: computed.reads('friendActivity.lastMessage'),
 
-  currentNotificationDidChange: function() {
+  subscribeToMessages: on('init', function() {
+    this.get('friendActivity').on('messageWasReceived', this, 'messageWasReceived');
+  }),
+
+  messageWasReceived(message) {
+    this.set('currentNotification', message);
     this.set('isActive', true);
-    run.later(this, function() {
+    run.later(() => {
       this.set('isActive', false);
     }, 1500);
-  }.observes('friendActivity.lastMessage')
+  }
 });
