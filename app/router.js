@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('helpers');
   this.route('ember-object');
   this.route('components');
+  this.route('services');
 });
 
 export default Router;
