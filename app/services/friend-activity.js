@@ -8,5 +8,5 @@ export default Ember.Service.extend(Ember.Evented, {
     socket.onmessage = run.bind(this, function(e) {
       this.trigger('messageWasReceived', e.data);
     });
-  }),
+  })
 });

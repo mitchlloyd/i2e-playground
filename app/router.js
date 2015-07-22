@@ -18,6 +18,7 @@ Router.map(function() {
   this.route('ember-object');
   this.route('components');
   this.route('services');
+  this.route('pikaday');
 });
 
 export default Router;

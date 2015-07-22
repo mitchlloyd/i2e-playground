@@ -21,5 +21,9 @@ module.exports = function(defaults) {
 
   app.import('bower_components/sockjs-client/dist/sockjs.js');
 
+  // Pikaday
+  app.import('bower_components/pikaday/pikaday.js');
+  app.import('bower_components/pikaday/css/pikaday.css')
+
   return app.toTree();
 };
