@@ -15,6 +15,7 @@ Router.map(function() {
   });
 
   this.route('helpers');
+  this.route('helpers-with-state');
   this.route('ember-object');
   this.route('components');
   this.route('services');
