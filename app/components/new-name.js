@@ -1,5 +1,5 @@
 import Ember from 'ember';
-var computed = Ember.computed;
+const computed = Ember.computed;
 
 export default Ember.Component.extend({
   actions: {
